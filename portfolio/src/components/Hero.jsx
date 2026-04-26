@@ -50,7 +50,7 @@ const Hero = () => {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-          className="relative h-[400px] md:h-[600px] hidden md:flex justify-center items-center"
+          className="relative h-[400px] md:h-[600px] flex justify-center items-center mt-10 md:mt-0"
         >
           <div className="w-[300px] h-[400px] md:w-[400px] md:h-[500px] rounded-[40px] overflow-hidden glass-effect p-2 shadow-2xl relative z-10 border border-white/10 glow-on-hover transition-all duration-500 group">
              {/* Profile Image PlaceHolder */}
