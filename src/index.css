@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-background: #0f0f0f;
+  --color-card: #1a1a1a;
+  --color-primary: #a3ff12;
+  --color-text-main: #ffffff;
+  --color-text-muted: #9ca3af;
+  --font-sans: "Inter", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-text-main font-sans antialiased selection:bg-primary selection:text-black;
+    scroll-behavior: smooth;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f0f0f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a3ff12;
+}
+
+/* Glassmorphism utility */
+.glass-effect {
+  background: rgba(26, 26, 26, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Simple generic glow */
+.glow-on-hover:hover {
+  box-shadow: 0 0 20px rgba(163, 255, 18, 0.2);
+  border-color: rgba(163, 255, 18, 0.5);
+}
