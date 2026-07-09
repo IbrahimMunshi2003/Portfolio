@@ -5,20 +5,20 @@ import { ChevronDown } from "lucide-react";
 
 const faqs = [
   {
-    q: "What is your design process?",
-    a: "I follow a human-centered approach: Discover, Define, Design, and Deliver. I start by understanding your goals, wireframing solutions, designing high-fidelity UI, and finally developing or handing over the assets."
+    q: "What technologies do you specialize in?",
+    a: "I specialize in the MERN stack, including React, Node.js, Express.js, and MongoDB. I also work with Django, PostgreSQL, JavaScript, Python, REST APIs, and modern frontend technologies like Tailwind CSS and Bootstrap."
   },
   {
-    q: "Do you offer both design and development?",
-    a: "Yes! I specialize in bridging the gap between design and engineering. I design in Figma and build the front-end using React, Next.js, and Tailwind CSS."
+    q: "What types of projects do you build?",
+    a: "I develop responsive business websites, full-stack web applications, AI-powered platforms, ERP systems, admin dashboards, and custom web solutions tailored to client requirements."
   },
   {
-    q: "How long does a typical project take?",
-    a: "A typical landing page takes 1-2 weeks, while a full web application or complex portfolio might take 4-8 weeks depending on the scope and features required."
+    q: "Can you build both the frontend and backend?",
+    a: "Yes. I build complete full-stack applications, from responsive user interfaces to secure backend APIs, database integration, authentication, and deployment."
   },
   {
-    q: "What are your starting rates?",
-    a: "Pricing varies based on project scope. However, my minimum engagement starts at $1,500. Let's talk about your budget and see how we can work together."
+    q: "Are you available for internships or full-time opportunities?",
+    a: "Yes. I'm open to internships, full-time roles, and freelance projects where I can contribute, learn new technologies, and build scalable web applications."
   }
 ];
 
@@ -35,8 +35,13 @@ const FAQ = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16 space-y-4"
         >
-          <h2 className="text-4xl md:text-5xl font-extrabold">Got <span className="text-primary">Questions?</span></h2>
-          <p className="text-text-muted">Frequently asked questions about my services & process.</p>
+          <h2 className="text-4xl md:text-5xl font-extrabold">
+  Frequently <span className="text-primary">Asked Questions</span>
+</h2>
+
+<p className="text-text-muted">
+  Learn more about my skills, experience, and the services I provide.
+</p>
         </motion.div>
 
         <div className="space-y-4">

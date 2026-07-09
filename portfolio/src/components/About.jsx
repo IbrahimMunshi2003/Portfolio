@@ -6,7 +6,7 @@ const CountUp = CountUpPkg.default || CountUpPkg;
 
 const stats = [
   { id: 1, value: 1, label: "Years Experience", suffix: "+" },
-  { id: 2, value: 5, label: "Projects Completed", suffix: "+" },
+  { id: 2, value: 2, label: "Projects Completed", suffix: "" },
   { id: 3, value: 2, label: "Companies Worked", suffix: "" },
   { id: 4, value: 3, label: "Certifications", suffix: "" },
 ];
