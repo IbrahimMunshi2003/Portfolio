@@ -16,7 +16,16 @@ const projects = [
     category: "React & Django + AI",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
     link: "https://ai-elibrary.vercel.app/",
-  }
+  },
+  {
+    id: 3,
+    title: "AI Pharma CRM",
+    category: "React • FastAPI • PostgreSQL • AI",
+    image:
+      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+    link: "https://medico-nine-smoky.vercel.app/assistant", 
+  },
+
 ];
 
 const Projects = () => {
