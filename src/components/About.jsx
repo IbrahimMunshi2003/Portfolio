@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import CountUpPkg from "react-countup";
 import { useInView } from "react-intersection-observer";
@@ -6,8 +7,8 @@ const CountUp = CountUpPkg.default || CountUpPkg;
 
 const stats = [
   { id: 1, value: 1, label: "Years Experience", suffix: "+" },
-  { id: 2, value: 2, label: "Projects Completed", suffix: "" },
-  { id: 3, value: 2, label: "Companies Worked", suffix: "" },
+  { id: 2, value: 4, label: "Projects Completed", suffix: "+" },
+  { id: 3, value: 1, label: "Companies Worked", suffix: "" },
   { id: 4, value: 3, label: "Certifications", suffix: "" },
 ];
 
@@ -18,10 +19,12 @@ const About = () => {
   });
 
   return (
-    <section id="about" className="py-24 px-6 md:px-24 bg-[#0a0a0a] relative">  
+    <section
+      id="about"
+      className="py-24 px-6 md:px-24 bg-[#0a0a0a] relative"
+    >
       <div className="max-w-7xl mx-auto" ref={ref}>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-          
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -29,13 +32,28 @@ const About = () => {
             className="space-y-8"
           >
             <h2 className="text-4xl md:text-5xl font-bold">
-              Behind the <span className="text-primary italic">Codes</span>   
+              Behind the{" "}
+              <span className="text-primary italic">Codes</span>
             </h2>
+
             <p className="text-text-muted text-lg leading-relaxed">
-              MERN Stack Developer with hands-on experience in building full-stack web applications. Skilled in developing responsive front-end interfaces, designing secure and scalable back-end systems, and integrating RESTful APIs.     
+              I am a MERN Stack Developer with hands-on experience
+              building full-stack web applications. My technical skills
+              include React, JavaScript, Node.js, Express.js, MongoDB,
+              Django, and PostgreSQL. I enjoy creating responsive user
+              interfaces, developing RESTful APIs, and integrating
+              reliable database solutions.
             </p>
+
             <p className="text-text-muted text-lg leading-relaxed">
-              Experienced in delivering clean, maintainable code through real-world projects, including e-commerce and business websites. Focused on optimizing performance, enhancing user experience, and deploying production-ready applications. Continuously learning modern technologies to build high-quality, scalable solutions.
+              Through real-world projects and development internships,
+              I have worked on business websites, e-commerce platforms,
+              AI-powered applications, and ERP systems. I focus on
+              writing maintainable code, improving user experience,
+              optimizing performance, and deploying production-ready
+              applications. I am eager to contribute my skills to a
+              professional software development team and continue
+              growing as a full-stack developer.
             </p>
           </motion.div>
 
@@ -48,16 +66,24 @@ const About = () => {
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 className="p-8 rounded-3xl glass-effect border border-white/5 hover:border-primary/50 transition-colors duration-300 flex flex-col items-center justify-center text-center space-y-2 glow-on-hover"
               >
-                <div className="text-4xl md:text-5xl font-black text-white">  
-                  {inView ? <CountUp end={stat.value} duration={2.5} suffix={stat.suffix} /> : "0"}
+                <div className="text-4xl md:text-5xl font-black text-white">
+                  {inView ? (
+                    <CountUp
+                      end={stat.value}
+                      duration={2.5}
+                      suffix={stat.suffix}
+                    />
+                  ) : (
+                    "0"
+                  )}
                 </div>
+
                 <div className="text-sm font-medium text-text-muted uppercase tracking-wider">
                   {stat.label}
                 </div>
               </motion.div>
             ))}
           </div>
-
         </div>
       </div>
     </section>
