@@ -1,6 +1,4 @@
-
 import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 import { ArrowUpRight } from "lucide-react";
 
 const projects = [
@@ -39,17 +37,13 @@ const projects = [
 ];
 
 const Projects = () => {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
-
   return (
     <section id="projects" className="py-24 px-6 md:px-24 bg-[#050505]">
-      <div className="max-w-7xl mx-auto" ref={ref}>
+      <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16 space-y-4"
         >
@@ -63,26 +57,16 @@ const Projects = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {projects.map((project, i) => (
-            <motion.div
+            <motion.a
               key={project.id}
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={inView ? { opacity: 1, scale: 1 } : {}}
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.1 }}
               transition={{ duration: 0.6, delay: i * 0.1 }}
-              className="group relative rounded-[2rem] overflow-hidden cursor-pointer"
-              onClick={() =>
-                window.open(project.link, "_blank", "noopener,noreferrer")
-              }
-              role="link"
-              tabIndex={0}
-              onKeyDown={(event) => {
-                if (event.key === "Enter") {
-                  window.open(
-                    project.link,
-                    "_blank",
-                    "noopener,noreferrer"
-                  );
-                }
-              }}
+              className="group relative block rounded-[2rem] overflow-hidden cursor-pointer"
             >
               <div className="aspect-[4/3] w-full overflow-hidden">
                 <img
@@ -109,7 +93,7 @@ const Projects = () => {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </motion.a>
           ))}
         </div>
 
